@@ -23,10 +23,10 @@ public class BaseSteps {
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver2.exe");
 
-        ChromeOptions options = new ChromeOptions();
-        options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+        //ChromeOptions options = new ChromeOptions();
+        //options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
