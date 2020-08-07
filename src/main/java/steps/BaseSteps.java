@@ -21,7 +21,7 @@ public class BaseSteps {
     }
 
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver1.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver2.exe");
 
         ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
