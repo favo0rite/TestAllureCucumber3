@@ -1,7 +1,7 @@
 pipeline {
-    
-    node('WINDOWS') {
+    agent any
 
+    stages {
         stage('Print message') {
             steps {
                 echo "${PARAMS}"
@@ -21,6 +21,5 @@ pipeline {
                         results: [[path: 'target/allure-results']]
             }
         }
-
     }
 }
