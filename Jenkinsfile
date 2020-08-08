@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run test') {
             steps {
-                withMaven(maven: 'maven_3.6.3') {
+                withMaven(maven: 'maven-3.3.9') {
                     bat 'mvn clean test -Dtags=${tags} allure:report'
                 }
             }
