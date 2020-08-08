@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    node('WINDOWS') {
     stages {
         stage('Print message') {
             steps {
@@ -21,5 +21,6 @@ pipeline {
                         results: [[path: 'target/allure-results']]
             }
         }
+    }
     }
 }
