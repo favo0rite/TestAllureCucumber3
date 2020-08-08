@@ -10,7 +10,7 @@ pipeline {
         stage('Run test') {
             steps {
                 withMaven(maven: 'maven_3.6.3') {
-                    bat 'mvn clean test -Dtest=AllureTest#${TAG} allure:report -Dmaven.test.failure.ignore=true install'
+                    bat 'mvn clean test -Dtags=${tags} allure:report'
                 }
             }
         }
